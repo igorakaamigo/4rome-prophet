@@ -3,5 +3,9 @@
   "private": true,
   "dependencies": {
     "jquery": "^3.4.1"
+  },
+  "engines": {
+    "node": "11.7.0",
+    "yarn": "1.13.0"
   }
 }
