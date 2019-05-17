@@ -1,0 +1,27 @@
+<%= form_with url: root_path, local: true do |f| %>
+  <div id="js-carousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <% @requests.each_with_index do |r, i| %>
+        <%= content_tag(:div, class: (i == 0 ? 'carousel-item active' : 'carousel-item')) do %>
+          <%= image_tag(yandex_prophecy(r), alt: r, class: 'd-block w-100') %>
+          <div class="carousel-caption d-none d-md-block">
+            <%= f.label("item-#{i}") do %>
+              <%= r %>
+              <%= f.check_box("item-#{i}") %>
+              <%= f.hidden_field("item-#{i}-value", value: r) %>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+    <a class="carousel-control-prev" href="#js-carousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only"><%= t('previous_slide') %></span>
+    </a>
+    <a class="carousel-control-next" href="#js-carousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only"><%= t('next_slide') %></span>
+    </a>
+  </div>
+  <%= f.submit t('next'), class: 'btn btn-primary' %>
+<% end %>

@@ -1,0 +1,7 @@
+<%= form_with url: second_page_path, local: true do |f| %>
+  <div class="form-group">
+    <%= f.label :requests, t('requests') %>
+    <%= f.text_area :requests, value: @requests, required: true, class: 'form-control' %>
+  </div>
+  <%= f.submit t('next'), class: 'btn btn-primary' %>
+<% end %>

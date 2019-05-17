@@ -1,0 +1,11 @@
+en:
+  # Application title
+  title: "The prophet"
+  # Request text area label
+  requests: "Requests"
+  # Next button caption
+  next: "Next"
+  # Previous slide
+  previous_slide: "Previous"
+  # Next slide
+  next_slide: "Next"

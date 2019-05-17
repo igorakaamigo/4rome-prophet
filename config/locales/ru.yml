@@ -1,0 +1,11 @@
+ru:
+  # Application title
+  title: "Релевантный провидец"
+  # Request text area label
+  requests: "Запросы"
+  # Next button caption
+  next: "Далее"
+  # Previous slide
+  previous_slide: "Предыдущий"
+  # Next slide
+  next_slide: "Следующий"
